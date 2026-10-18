@@ -17,6 +17,7 @@ Responsive Design: Designed with a clean layout for a better browsing experience
 HTML5 — Structures the website.
 CSS3 — Styles the website, including colors, layouts, and hover effects.
 JavaScript — Adds interactive features and functionality although it's role in my website is limited.
+
 🎯 Project Goals
 
 The main goals of this project are to:
@@ -26,6 +27,7 @@ Learn and practise HTML and CSS.
 Understand website layouts, navigation bars, and scrolling.
 Experiment with colors, buttons, images, and hover effects.
 Improve web development skills through hands-on practice.
+
 🔮 Future Improvements
 
 Possible future updates include:
