@@ -1,426 +1,645 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title>My Garden</title>
+    <title>My Garden — Botanical Sanctuary & Expert Care Guide</title>
+    
+    <!-- Character Encoding & Responsive Design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <style>
-      nav {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
+    <!-- Primary SEO Optimization -->
+    <meta name="description" content="Explore My Garden, an expert urban botany care guide by Jalees Habib. Discover expert tips on growing creepers, shrubs, and fragrant flowers like Star Jasmine on a compact balcony.">
+    <meta name="keywords" content="urban botany, balcony garden, Jalees Habib, botanical care guide, Helicopter Plant, Star Jasmine, Ixora, English Lavender, organic gardening tips, plant care analytics">
+    <meta name="author" content="Jalees Habib">
+    <meta name="robots" content="index, follow">
 
-        background: rgba(16, 42, 27, 1);
-        backdrop-filter: blur(12px);
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    <!-- GSAP & ScrollTrigger Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-        padding: 18px 7%;
-      }
-      .logo span {
-        color: rgb(143, 255, 111);
-        font-family: Arial;
-      }
-      .logo {
-        color: aliceblue;
-        font-family: Arial;
-        font-size: 1.8rem;
-      }
-      nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 86%;
-        z-index: 1000;
-        background: rgba(16, 42, 27, 1);
-        backdrop-filter: blur(12px);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 18px 7%;
-      }
-      nav ul {
-        display: flex;
-        list-style: none;
-        gap: 35px;
-        margin: 0;
-        padding: 0;
-      }
-      nav a {
-        color: #ffffff;
-        font-size: 0.9rem;
-        font-family: Arial, sans-serif;
-        text-decoration: none;
-        transition: 0.3s;
-      }
-      nav a:hover {
-        color: rgb(143, 255, 111);
-      }
-      h1 {
-        color: rgb(226, 255, 157);
-        font-family: Arial;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        background: linear-gradient(90deg, rgba(16, 42, 27, 1), #328442);
-        margin: 0;
-        padding-top: 100px;
-      }
-      .lime {
-        color: rgb(145, 255, 114);
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 45px;
-        gap: 10px;
-        text-align: left;
-      }
-      .h2 {
-        color: rgb(231, 255, 231);
-        font-size: 80px;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .h2 span {
-        color: rgb(143, 255, 111);
-        font-family: Arial;
-      }
-      p {
-        color: rgb(199, 255, 212);
-        font-size: 25px;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      main {
-        padding: 30px 7%;
-      }
-      .button-box {
-        display: flex;
-        gap: 20px;
-      }
-      .button-box button {
-        background-color: #d4ffa3;
-        color: #102a1b;
-        border: none;
-        padding: 12px 24px;
-        border-radius: 25px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-      .button-box button:hover {
-        background-color: #00ff62;
-        transform: scale(1.08);
-      }
-      section {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: left;
-        text-align: left;
-      }
-      #care {
-        background: linear-gradient(180deg, #fff156, #001846, #001110, #000010);
-        width: 100%;
-        overflow: hidden;
-        box-sizing: border-box;
-        align-items: center;
-      }
-      #plants {
-        background: linear-gradient(180deg, #cfff98, #e0ff63, #fff156);
-        width: 100%;
-        overflow: hidden;
-        box-sizing: border-box;
-        align-items: center;
-      }
-      .card {
-        background: linear-gradient(180deg, #ffffff, #d2d2d2);
-        width: 850px;
-        box-sizing: border-box;
-        padding: 20px;
-        margin: 20px 0;
-        border-radius: 15px;
-        box-shadow: 0 7px 15px #909090;
-        text-align: left;
-        border-radius: 15px;
-      }
-      .card1 {
-        background: linear-gradient(180deg, #ffffff, #d2d2d2);
-        flex: 0 0 630px;
-        height: 400px;
-        box-sizing: border-box;
-        padding: 20px;
-        margin: 20px 0;
-        border-radius: 15px;
-        box-shadow: 0 7px 15px #909090;
-        text-align: left;
-        scroll-snap-align: start;
-        min-width: 0;
-        box-sizing: border-box;
-        border-radius: 15px;
-        scrollbar-width: none;
-      }
-
-      .card2 {
-        background-color: #c4c6a0;
-        width: 550px;
-        padding: 20px;
-        margin: 20px auto;
-        border-radius: 15px;
-        box-shadow: 0 4px 10px #909090;
-        text-align: center;
-      }
-      .grey {
-        color: #657070;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 17px;
-      }
-      .normal {
-        color: #005822;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 19px;
-      }
-      .big {
-        font-size: 35px;
-        font-family: Arial;
-        color: #102a1b;
-      }
-
-      .card-box {
-        display: flex;
-        gap: 20px;
-
-        width: 100%;
-        box-sizing: border-box;
-
-        overflow-x: auto;
-        overflow-y: hidden;
-
-        padding: 20px;
-
-        scroll-behavior: smooth;
-        scroll-snap-type: x mandatory;
-
-        justify-content: flex-start;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-      }
-      .card-box2 {
-        display: flex;
-        gap: 20px;
-
-        width: 100%;
-        box-sizing: border-box;
-        align-items: center;
-        overflow-x: auto;
-        overflow-y: hidden;
-
-        padding: 20px;
-
-        scroll-behavior: smooth;
-        scroll-snap-type: x mandatory;
-
-        justify-content: flex-start;
-
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-      }
-      .cards-box::-webkit-scrollbar {
-        display: none;
-      }
-      body {
-        margin: 0;
-        padding-top: 100px;
-        max-width: 100%;
-        overflow-x: hidden;
-      }
-      footer {
-        font-size: 10px;
-        color: #ffffff;
-        text-align: center;
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css"/>
   </head>
   <body>
-    <nav>
-      <div class="logo"><span>My</span> Garden 🌿</div>
-      <ul>
-        <li><a href="#plants">Plants</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#care">Care Guide</a></li>
-      </ul>
-    </nav>
+    <!-- ALERT MODAL NOTIFICATION -->
+    <div id="modalAlert" class="modal-alert">
+      <i class="fa-solid fa-circle-check"></i> Thank you! Your message has been
+      sent successfully.
+    </div>
+
+    <!-- HEADER & NAVIGATION -->
+    <header>
+      <nav class="navbar">
+        <a href="#about" class="logo">
+          <i class="fa-solid fa-leaf"></i>
+          <span>My</span> Garden
+        </a>
+
+        <!-- Desktop Links -->
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#plants" class="nav-link">Plants</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#care" class="nav-link">Care Guide</a></li>
+          <li><a href="#tips" class="nav-link">Tips & Stats</a></li>
+        </ul>
+
+        <!-- Hamburger Toggler Icon -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+
+      <!-- Mobile Vertical Dropdown Menu with Close Button -->
+      <div class="mobile-menu" id="mobileMenu">
+        <button
+          class="mobile-close-btn"
+          id="closeMenuBtn"
+          aria-label="Close Menu"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="#about" class="nav-link mobile-link">About</a>
+        <a href="#plants" class="nav-link mobile-link">Plants</a>
+        <a href="#gallery" class="nav-link mobile-link">Gallery</a>
+        <a href="#care" class="nav-link mobile-link">Care Guide</a>
+        <a href="#tips" class="nav-link mobile-link">Tips & Stats</a>
+        <a href="#contact" class="nav-link mobile-link">Contact</a>
+      </div>
+    </header>
+
     <main>
+      <!-- SECTION 1: HERO / ABOUT -->
       <section id="about">
-        <p class="lime"><b>MY TIPS</b></p>
-        <h2 class="h2">TO GROW A BEAUTIFUL <span>GARDEN.</span></h2>
-        <br />
-        <p>
-          Gardening is a sourse of great pleasure for me. In my house, at a
-          small balcony, there grows several flowering plants which brings
-          beauty to our house and pleasure to the mind. Some of the flowers have
-          sole snoothing smell, and every single one of them looks beautiful
-          when the flowers blooms.
+        <div class="hero-grid">
+          <div class="about-text">
+            <span class="section-tag">🌿 Botanical Haven</span>
+            <h1>My Sanctuary & Tips to Grow a <span>Beautiful Garden</span></h1>
+            <p>
+              Gardening is a source of great pleasure for me. On my compact home
+              balcony, I cultivate several flowering plants that bring vibrant
+              color, life, and serene tranquility to our living space.
+            </p>
+            <p>
+              Some blossoms offer a soothing natural fragrance, while others
+              captivate with their intricate petals. Discover botanical care
+              techniques and explore my personal collection below.
+            </p>
+            <div class="btn-group">
+              <a href="#plants" class="btn btn-primary">
+                <i class="fa-solid fa-seedling"></i> Explore Plants
+              </a>
+              <a href="#care" class="btn btn-secondary">
+                <i class="fa-solid fa-hand-holding-droplet"></i> Care Guide
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-card-preview">
+            <img
+              src="https://images.pexels.com/photos/1083822/pexels-photo-1083822.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Beautiful Balcony Garden"
+            />
+            <div class="hero-badge">
+              <i class="fa-solid fa-sun" style="color: #fef08a"></i>
+              <b>Home Balcony Collection</b>
+              <p style="font-size: 0.88rem; color: #cbd5e1">
+                Nurtured daily with natural sunlight & pure organic care.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: PLANTS EXPLORER WITH FILTERS -->
+      <section id="plants">
+        <span class="section-tag">🌸 Living Botanical Collection</span>
+        <h2 class="section-title">Explore Featured Plants</h2>
+        <p class="section-subtitle">
+          A curated display of lush creepers, aromatic shrubs, and vibrant
+          perennials residing in my home garden.
         </p>
-        <br />
-        <div class="button-box">
-          <a href="#plants">
-            <button class="button">Explore plants 🌱</button>
-          </a>
-          <a href="#care">
-            <button class="button">Care taking ✂️</button>
-          </a>
+
+        <!-- Category Filter -->
+        <div class="filter-container">
+          <button class="filter-btn active" data-filter="all">
+            All Species
+          </button>
+          <button class="filter-btn" data-filter="fragrant">Fragrant</button>
+          <button class="filter-btn" data-filter="creeper">Creepers</button>
+          <button class="filter-btn" data-filter="low-maintenance">
+            Low Maintenance
+          </button>
+        </div>
+
+        <!-- Plants Grid Container -->
+        <div class="plants-grid">
+          <!-- Plant 1 -->
+          <article class="plant-card" data-category="creeper">
+            <div class="plant-img-wrapper">
+              <span class="plant-category-badge">Creeper</span>
+              <img
+                src="https://images.pexels.com/photos/4099354/pexels-photo-4099354.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Helicopter Plant"
+              />
+            </div>
+            <div class="plant-content">
+              <h3 class="plant-title">Helicopter Plant</h3>
+              <p class="plant-scientific">Hiptage benghalensis</p>
+              <div class="plant-meta-tags">
+                <span class="meta-tag"
+                  ><i class="fa-solid fa-sun"></i> Mild Sun</span
+                >
+                <span class="meta-tag"
+                  ><i class="fa-solid fa-droplet"></i> Daily Water</span
+                >
+              </div>
+              <p class="plant-desc">
+                A woody creeper laden with delicate flowers transition from
+                white to a vivid reddish-purple. The blossoms appear in patches,
+                lasting 1 to 2 days while releasing a light fragrance.
+              </p>
+              <button
+                class="card-action-btn"
+                onclick="
+                  openPlantModal(
+                    'Helicopter Plant',
+                    'Hiptage benghalensis',
+                    'Requires partial sun and routine daily moisture. High resistance to urban conditions.',
+                  )
+                "
+              >
+                View Profile
+              </button>
+            </div>
+          </article>
+
+          <!-- Plant 2 -->
+          <article class="plant-card" data-category="low-maintenance">
+            <div class="plant-img-wrapper">
+              <span class="plant-category-badge">Low Care</span>
+              <img
+                src="https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Periwinkle"
+              />
+            </div>
+            <div class="plant-content">
+              <h3 class="plant-title">Periwinkle</h3>
+              <p class="plant-scientific">Catharanthus roseus</p>
+              <div class="plant-meta-tags">
+                <span class="meta-tag"
+                  ><i class="fa-solid fa-sun"></i> Full / Partial Sun</span
+                >
+                <span class="meta-tag"
+                  ><i class="fa-solid fa-faucet-drip"></i> Moderate Water</span
+                >
+              </div>
+              <p class="plant-desc">
+                Features cute, five-petaled pink and lavender blossoms. An
+                extremely durable plant requiring minimal maintenance. Its
+                blooms last 2–3 days and possess rich medicinal properties.
+              </p>
+              <button
+                class="card-action-btn"
+                onclick="
+                  openPlantModal(
+                    'Periwinkle',
+                    'Catharanthus roseus',
+                    'Extremely resilient flowering perennial that blooms year-round in warm climates.',
+                  )
+                "
+              >
+                View Profile
+              </button>
+            </div>
+          </article>
+
+          <!-- Plant 3 -->
+          <article class="plant-card" data-category="low-maintenance">
+            <div class="plant-img-wrapper">
+              <span class="plant-category-badge">Shrub</span>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyRvQkBqJsb9dqgBUcg0hx-JH4yHMzVGY6pMtcXI_SRadSo3LkQrRbIXaCeuUVScc2S-_O6RDexpfbuSDRTDgR4kearvXloC_2bhWZNLc5Ww&s=10"
+                alt="Ixora"
+              />
+            </div>
+            <div class="plant-content">
+              <h3 class="plant-title">Jungle Flame Ixora</h3>
+              <p class="plant-scientific">Ixora coccinea</p>
+              <div class="plant-meta-tags">
+                <span class="meta-tag"
+                  ><i class="fa-solid fa-sun"></i> Moderate Sun</span
+                >
+                <span class="meta-tag"
+                  ><i class="fa-solid fa-cloud-rain"></i> Regular Water</span
+                >
+              </div>
+              <p class="plant-desc">
+                Displays dense clusters of tiny tubular flowers ranging from
+                bright coral pink to crimson red. Blooms remain vibrant for up
+                to a month and a half, creating captivating color massing.
+              </p>
+              <button
+                class="card-action-btn"
+                onclick="
+                  openPlantModal(
+                    'Ixora',
+                    'Ixora coccinea',
+                    'Thrives in acidic soil with good drainage. Long lasting dense flower heads.',
+                  )
+                "
+              >
+                View Profile
+              </button>
+            </div>
+          </article>
+
+          <!-- Plant 4 -->
+          <article class="plant-card" data-category="creeper">
+            <div class="plant-img-wrapper">
+              <span class="plant-category-badge">Creeper</span>
+              <img
+                src="https://images.pexels.com/photos/1083822/pexels-photo-1083822.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Golden Allamanda"
+              />
+            </div>
+            <div class="plant-content">
+              <h3 class="plant-title">Golden Allamanda</h3>
+              <p class="plant-scientific">Allamanda cathartica</p>
+              <div class="plant-meta-tags">
+                <span class="meta-tag"
+                  ><i class="fa-solid fa-sun"></i> Direct Sunlight</span
+                >
+                <span class="meta-tag"
+                  ><i class="fa-solid fa-droplet"></i> High Moisture</span
+                >
+              </div>
+              <p class="plant-desc">
+                A sprawling climbing vine with large, trumpet-shaped
+                golden-yellow flowers. Requires trellis support and plenty of
+                sunlight to bloom profusely throughout warmer seasons.
+              </p>
+              <button
+                class="card-action-btn"
+                onclick="
+                  openPlantModal(
+                    'Allamanda',
+                    'Allamanda cathartica',
+                    'Vigorous climber that benefits from regular pruning and organic fertilizers.',
+                  )
+                "
+              >
+                View Profile
+              </button>
+            </div>
+          </article>
+
+          <!-- Plant 5 -->
+          <article class="plant-card" data-category="fragrant">
+            <div class="plant-img-wrapper">
+              <span class="plant-category-badge">Fragrant</span>
+              <img
+                src="https://images.pexels.com/photos/1382390/pexels-photo-1382390.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Star Jasmine"
+              />
+            </div>
+            <div class="plant-content">
+              <h3 class="plant-title">Star Jasmine</h3>
+              <p class="plant-scientific">Jasminum officinale</p>
+              <div class="plant-meta-tags">
+                <span class="meta-tag"
+                  ><i class="fa-solid fa-sun"></i> Full Sun (6-8 hrs)</span
+                >
+                <span class="meta-tag"
+                  ><i class="fa-solid fa-wind"></i> Highly Fragrant</span
+                >
+              </div>
+              <p class="plant-desc">
+                Celebrated for its intense, sweet aroma that acts as a natural
+                air freshener. Produces pristine white star-shaped blooms.
+                Thrives best with ample sunshine.
+              </p>
+              <button
+                class="card-action-btn"
+                onclick="
+                  openPlantModal(
+                    'Jasmine',
+                    'Jasminum officinale',
+                    'Requires 6+ hours of full sun for peak bloom density and fragrant oil concentration.',
+                  )
+                "
+              >
+                View Profile
+              </button>
+            </div>
+          </article>
+
+          <!-- Plant 6 -->
+          <article class="plant-card" data-category="fragrant">
+            <div class="plant-img-wrapper">
+              <span class="plant-category-badge">Fragrant</span>
+              <img
+                src="https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="English Lavender"
+              />
+            </div>
+            <div class="plant-content">
+              <h3 class="plant-title">English Lavender</h3>
+              <p class="plant-scientific">Lavandula angustifolia</p>
+              <div class="plant-meta-tags">
+                <span class="meta-tag"
+                  ><i class="fa-solid fa-sun"></i> Full Sun</span
+                >
+                <span class="meta-tag"
+                  ><i class="fa-solid fa-faucet"></i> Low Water</span
+                >
+              </div>
+              <p class="plant-desc">
+                Renowned for its soothing aromatic foliage and delicate violet
+                floral spikes. Attracts beneficial pollinators like bees and
+                butterflies to urban gardens.
+              </p>
+              <button
+                class="card-action-btn"
+                onclick="
+                  openPlantModal(
+                    'Lavender',
+                    'Lavandula angustifolia',
+                    'Drought tolerant once established. Requires gritty, well-draining soil.',
+                  )
+                "
+              >
+                View Profile
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECTION 3: VISUAL GALLERY -->
+      <section id="gallery">
+        <span class="section-tag">📸 Botanical Gallery</span>
+        <h2 class="section-title">Garden Moments</h2>
+        <p class="section-subtitle">
+          Visual snapshots capturing dew drops, blossom stages, and balcony
+          green corners.
+        </p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img
+              src="https://images.pexels.com/photos/1083822/pexels-photo-1083822.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Morning Dew"
+            />
+            <div class="gallery-overlay">
+              <h4>Morning Dew</h4>
+              <p>Fresh hydration on leaves at sunrise.</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://images.pexels.com/photos/1407305/pexels-photo-1407305.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Petal Burst"
+            />
+            <div class="gallery-overlay">
+              <h4>Petal Burst</h4>
+              <p>Full bloom cycle during peak season.</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Urban Balcony"
+            />
+            <div class="gallery-overlay">
+              <h4>Urban Balcony</h4>
+              <p>Maximizing greenery in vertical arrangements.</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEiVgxMQnFIoIgzMjIFOiYiDPjHUgJKD--0NJVuTL5nQ&s=10"
+              alt="Velvet Textures"
+            />
+            <div class="gallery-overlay">
+              <h4>Velvet Textures</h4>
+              <p>Intricate natural symmetry in petals.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
+              alt="Botanical Harmony"
+            />
+            <div class="gallery-overlay">
+              <h4>Botanical Harmony</h4>
+              <p>Lush green foliage weaving patterns of calm.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93"
+              alt="Garden Blossoms"
+            />
+            <div class="gallery-overlay">
+              <h4>Garden Blossoms</h4>
+              <p>Colorful blooms radiating joy in natural clusters.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: CARE GUIDE -->
+      <section id="care">
+        <span class="section-tag">✂️ Essential Care Guide</span>
+        <h2 class="section-title">Nurturing Healthy Plants</h2>
+        <p class="section-subtitle">
+          Core principles to keep balcony flora flourishing, healthy, and
+          bug-free year round.
+        </p>
+
+        <div class="care-cards-container">
+          <div class="care-card">
+            <div class="care-icon"><i class="fa-solid fa-sun"></i></div>
+            <h3>1. Sunlight Management</h3>
+            <p>
+              Flowering plants require 4–8 hours of direct light. Arrange
+              shade-loving species behind taller creepers to safeguard delicate
+              foliage from scorching midday heat.
+            </p>
+          </div>
+          <div class="care-card">
+            <div class="care-icon"><i class="fa-solid fa-droplet"></i></div>
+            <h3>2. Precision Watering</h3>
+            <p>
+              Water deeply during early mornings so moisture penetrates the root
+              zone before evaporating. Avoid overwatering to prevent root rot
+              and fungus growth.
+            </p>
+          </div>
+          <div class="care-card">
+            <div class="care-icon"><i class="fa-solid fa-seedling"></i></div>
+            <h3>3. Soil & Organic Fertilizer</h3>
+            <p>
+              Utilize well-draining potting soil mixed with composted cow manure
+              or organic leaf mold. Aerate upper soil layers monthly for proper
+              root respiration.
+            </p>
+          </div>
+          <div class="care-card">
+            <div class="care-icon"><i class="fa-solid fa-scissors"></i></div>
+            <h3>4. Pruning & Pest Defense</h3>
+            <p>
+              Regularly deadhead spent blossoms and trim dry stems. Inspect
+              underside of leaves weekly for pests, using organic neem oil spray
+              when needed.
+            </p>
+          </div>
+          <div class="care-card">
+            <div class="care-icon"><i class="fa-solid fa-wind"></i></div>
+            <h3>5. Air Circulation</h3>
+            <p>
+              Ensure proper airflow between plants by spacing them adequately.
+              Good ventilation reduces humidity buildup, discourages fungal
+              infections, and strengthens stems.
+            </p>
+          </div>
+          <div class="care-card">
+            <div class="care-icon">
+              <i class="fa-solid fa-temperature-high"></i>
+            </div>
+            <h3>6. Climate & Seasonal Care</h3>
+            <p>
+              Adjust care routines according to seasonal changes. Protect
+              sensitive plants from frost with covers, and provide extra
+              hydration during peak summer heat.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: TIPS & METRICS -->
+      <section id="tips">
+        <span class="section-tag">💡 Expert Tips & Stats</span>
+        <h2 class="section-title">Garden Analytics</h2>
+        <p class="section-subtitle">
+          Smart practices and stats compiled from home cultivation experiments.
+        </p>
+
+        <div class="tips-wrapper">
+          <div class="tip-box">
+            <div class="tip-item">
+              <span class="tip-number">01</span>
+              <div class="tip-content">
+                <h4>Rotate Pots Fortnightly</h4>
+                <p>
+                  Ensures even sun exposure and balanced symmetrical growth
+                  across all stems.
+                </p>
+              </div>
+            </div>
+            <div class="tip-item">
+              <span class="tip-number">02</span>
+              <div class="tip-content">
+                <h4>Rainwater Harvesting</h4>
+                <p>
+                  Collect natural rainwater for delicate jasmine and periwinkles
+                  to prevent tap minerals build up.
+                </p>
+              </div>
+            </div>
+            <div class="tip-item">
+              <span class="tip-number">03</span>
+              <div class="tip-content">
+                <h4>Companion Potting</h4>
+                <p>
+                  Pair low-lying shade plants under tall leggy creepers to
+                  maximize space and soil shade.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number">18+</div>
+              <div class="stat-label">Plant Varieties</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">365</div>
+              <div class="stat-label">Days of Blooms</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Organic Fertilization</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">4.9★</div>
+              <div class="stat-label">Garden Score</div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
-    <section id="plants">
-      <div class="card">
-        <div class="card2">
-          <img src="helicopter.png" alt="helicopter" width="500" />
-        </div>
-        <p class="grey"><i>Hiptage benghalensis</i></p>
-        <p class="normal">
-          helicopter plant, a Creeper like plant full of beautiful small pink to
-          redish-purple colored flowers which needs relatively low sun light and
-          care only needing mild sun light and watering every day. The plants
-          live for many years and the flowers bloom in patchs. when the flowers
-          first blosomes, they are white or light pink, gradually turning into
-          it's iconic pink color over the couse of a day. the flowers themsleves
-          live for 1-2 day before falling off.
-        </p>
-      </div>
-      <br />
 
-      <div class="card">
-        <div class="card2">
-          <img src="periwinkle.png" alt="periwinkle" width="500" />
-        </div>
-        <p class="grey"><i>Catharanthus roseus</i></p>
-        <p class="normal">
-          periwinkle, a small plant with small, cute, light pink color flowers.
-          This plant requires very low maitaince and relatively low sun light
-          and water. The flowers usually blooms 1 day after the buds shoe up and
-          the flowers lasts for about 2-3 day before falling off. periwinkle is
-          not only a cute and beautiful flowering plant, but also it has some
-          medical properties which makes it an overall interesting plant.
-        </p>
-      </div>
-
-      <br />
-
-      <div class="card">
-        <div class="card2">
-          <img src="ixora.png" alt="ixora" width="500" />
-        </div>
-        <p class="grey">Ixora coccinea</p>
-        <p class="normal">
-          Ixora, the plants of this family comes with different colors of
-          flowers ranging from red, orange, yellow, pink and even white. Our
-          ixoras have colors white and pink. They require moderate care and
-          sunlight. The flowers are tiny and clustered in a spot. The flowers
-          bloom 15-25 days after the first bud can be seen. The flowers are long
-          lasting , staing open for about 1-1.5 months before falling off. The
-          flowers blooms together and forms a tiny clusters which looks
-          absolutly adorable.
-        </p>
-      </div>
-      <div class="card">
-        <div class="card2">
-          <img src="alamonda.png" alt="allamanda" width="500" />
-        </div>
-        <p class="grey">Allamanda cathartica</p>
-        <p class="normal">
-          Allamanda, it is Creeper plant with large yellow flowers. The plant
-          grows around an support like a beam or another tree. The flowers
-          usually takes 6-7 days to bloom after the bud is seen and the flowers
-          usually lasts for about 2-3 days. The plant itself requires some sun
-          light and moderate care for the flowers to bloom. There are also wild
-          Allamandas growing yellow flowers and looking gorgeous.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card2">
-          <img src="jasmin.png" alt="jasmine" width="500" />
-        </div>
-        <p class="grey">Jasminium</p>
-        <p class="normal">
-          Jasnim is a small sized plant with small white flowers. Jasnime
-          flowers are known to having an intence sweet and pleasing smell. the
-          flowers bloom in about 3-5 days and lasts about 3 days. But unlike the
-          other plants, Jasnime is not suitable for indoor planting or a balcony
-          with low sunlight. It requires more care and sunlight needing about
-          6-8 hours of sunlight for the flowers to bloom abundently.But the
-          trade-off is worthed. The flowers will fill the whole room in sweet
-          smell that is like a natural air freshner.
-        </p>
-      </div>
-    </section>
-    <section id="care">
-      <div class="card-box">
-        <div class="card1">
-          <p class="big"><b>1. Sunlight ☀️</b></p>
-          <br />
-          <p class="normal">
-            Sunlight is essential for the healthy growth of plants. Most
-            flowering and fruit-bearing plants need about 4-8 hours of sunlight
-            every day. However, someplants grow well in partial shade. We should
-            place each plant in a suitable place according to its sunlight
-            requirements. Too much direct sunlight can damage. delicate plants,
-            while too little sunlight can make them weak. Therefore, proper
-            sunlight helps plants grow healthy and produce beautiful flowers and
-            fruits.
-          </p>
-        </div>
-        <div class="card1">
-          <p class="big"><b>2. Watering 💧</b></p>
-          <br />
-          <p class="normal">
-            Water is another important requirement for a garden. Plants need
-            water to grow and remain fresh. We should water our plants
-            regularly, especially during hot and dry weather. However, we should
-            not water them too much because excess water can cause root rot. The
-            amount of water depends on the type of plant, the size of its pot,
-            and the weather. Early morning is generally a good time to water
-            plants because thewater can reach the roots before the day becomes
-            too hot.
-          </p>
-        </div>
-      </div>
-      <div class="card-box2">
-        <div class="card1">
-          <p class="big"><b>3. Frtilizer and Soil 🌱</b></p>
-          <br />
-          <p class="normal">
-            Fertilizer and good soil are necessary for the proper growth of
-            plants. We should use fertile, well-drained soil that contains the
-            nutrients plants need. Organic fertilizers such as compost and
-            decomposed cow dung, can improve soil quality and help plants grow
-            well. We should apply fertilizer in the right amount because too
-            much ertilizer can damage the roots. We should also loosen the soil
-            occasionally to improve air circulation. Healthy soil helps plants
-            develop strong roots, green leaves, and beautiful flowers.
-          </p>
-        </div>
-        <div class="card1">
-          <p class="big"><b>4. Pruning and protecting ✂️</b></p>
-          <br />
-          <p class="normal">
-            Pruning and protecting plants are also important parts of garden
-            care. We should remove dead leaves, dry branches, and faded flowers
-            regularly. This helps plants remain healthy and look beautiful. We
-            should also check our plants for insects and diseases. If we find
-            any problems, we should take appropriate measures to protect them.
-            Removing weeds is equally important because weeds compete with
-            garden plants for water, sunlight, and nutrients. With regular care
-            and attention, we caneep our garden clean, healthy, and attractive.
-          </p>
-        </div>
-      </div>
-    </section>
+    <!-- FOOTER -->
     <footer>
-      <p>&copy Jalees Habib, Author, All Rights Reserved.</p>
+      <div class="footer-content">
+        <div class="logo" style="font-size: 1.4rem">
+          <i class="fa-solid fa-leaf" style="color: var(--accent-lime)"></i> My
+          Garden
+        </div>
+        <p>
+          &copy; 2026 Jalees Habib. All Rights Reserved. Crafted with passion
+          for urban botany.
+        </p>
+        <p>Collaboration: Rayaan Tasnim : User Interface Designer</p>
+        <div class="social-links">
+          <a
+            href="mailto:rayaantasnim@gmail.com"
+            class="social-btn"
+            aria-label="Gmail"
+          >
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/@jaleeshabib"
+            class="social-btn"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a
+            href="https://github.com/shahjahankabir22459-ship-it/my-garden/"
+            class="social-btn"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
     </footer>
+
+    <!-- JAVASCRIPT LOGIC & ACCURATE GSAP SCROLLTRIGGER ANIMATIONS -->
+    <script src="js/script.js"></script>
   </body>
 </html>
