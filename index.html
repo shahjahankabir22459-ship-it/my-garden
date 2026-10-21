@@ -203,7 +203,6 @@
             scroll-snap-type: x mandatory;
 
             justify-content: flex-start;
-            margin-top: 100px;
             scrollbar-width: none;
             -ms-overflow-style: none;
         }
@@ -270,7 +269,8 @@
             </section>
         </main>
         <section id="plants">
-            <div class="card">
+            
+                <div class="card">
                     <div class="card2">
                         <img src="helicopter.png" alt="helicopter" width="500">
                     </div>
@@ -285,31 +285,33 @@
                     </div>
                 <p class="grey"><i>Catharanthus roseus</i></p>
                 <p class="normal">periwinkle, a small plant with small, cute, light pink color flowers. This plant requires very low maitaince and relatively low sun light and water. The flowers usually blooms 1 day after the buds shoe up and the flowers lasts for about 2-3 day before falling off. periwinkle is not only a cute and beautiful flowering plant, but also it has some medical properties which makes it an overall interesting plant.</p>
-            </div>
+                </div>
+            
                 <br>
-            <div class="card">
-                <div class="card2">
-                    <img src="ixora.png" alt="ixora" width="500">
+            
+                <div class="card">
+                    <div class="card2">
+                        <img src="ixora.png" alt="ixora" width="500">
+                    </div>
+                    <p class="grey">Ixora coccinea
+                    <p class="normal">Ixora, the plants of this family comes with different colors of flowers ranging from red, orange, yellow, pink and even white. Our ixoras have colors white and pink. They require moderate care and sunlight. The flowers are tiny and clustered in a spot. The flowers bloom 15-25 days after the first bud can be seen. The flowers are long lasting , staing open for about 1-1.5 months before falling off. The flowers blooms together and forms a tiny clusters which looks absolutly adorable.</p>
                 </div>
-                <p class="grey">Ixora coccinea
-                <p class="normal">Ixora, the plants of this family comes with different colors of flowers ranging from red, orange, yellow, pink and even white. Our ixoras have colors white and pink. They require moderate care and sunlight. The flowers are tiny and clustered in a spot. The flowers bloom 15-25 days after the first bud can be seen. The flowers are long lasting , staing open for about 1-1.5 months before falling off. The flowers blooms together and forms a tiny clusters which looks absolutly adorable.</p>
-            </div>
-            <div class="card">
-                <div class="card2">
-                    <img src="alamonda.png" alt="allamanda" width="500">
+                <div class="card">
+                    <div class="card2">
+                        <img src="alamonda.png" alt="allamanda" width="500">
+                    </div>
+                    <p class="grey"> Allamanda cathartica</p>
+                    <p class="normal">Allamanda, it is Creeper plant with large yellow flowers. The plant grows around an support like a beam or another tree. The flowers usually takes 6-7 days to bloom after the bud is seen and the flowers usually lasts for about 2-3 days. The plant itself requires some sun light and moderate care for the flowers to bloom. There are also wild Allamandas growing yellow flowers and looking gorgeous.</p>
                 </div>
-                <p class="grey"> Allamanda cathartica</p>
-                <p class="normal">Allamanda, it is Creeper plant with large yellow flowers. The plant grows around an support like a beam or another tree. The flowers usually takes 6-7 days to bloom after the bud is seen and the flowers usually lasts for about 2-3 days. The plant itself requires some sun light and moderate care for the flowers to bloom. There are also wild Allamandas growing yellow flowers and looking gorgeous.</p>
-            </div>
-            <div class="card">
-                <div class="card2">
-                    <img src="jasmin.png" alt="jasmine" width="500">
+            
+            
+                <div class="card">
+                    <div class="card2">
+                        <img src="jasmin.png" alt="jasmine" width="500">
+                    </div>
+                    <p class="grey">Jasminium</p>
+                    <p class="normal">Jasnim is a small sized plant with small white flowers. Jasnime flowers are known to having an intence sweet and pleasing smell. the flowers bloom in about 3-5 days and lasts about 3 days. But unlike the other plants, Jasnime is not suitable for indoor planting or a balcony with low sunlight. It requires more care and sunlight needing about 6-8 hours of sunlight for the flowers to bloom abundently.But the trade-off is worthed. The flowers will fill the whole room in sweet smell that is like a natural air freshner. </p>
                 </div>
-                <p class="grey">Jasminium</p>
-                <p class="normal">Jasnim is a small sized plant with small white flowers. Jasnime flowers are known to having an intence sweet and pleasing smell. the flowers bloom in about 3-5 days and lasts about 3 days. But unlike the other plants, Jasnime is not suitable for indoor planting or a balcony with low sunlight. It requires more care and sunlight needing about 6-8 hours of sunlight for the flowers to bloom abundently.But the trade-off is worthed. The flowers will fill the whole room in sweet smell that is like a natural air freshner. </p>
-            </div>
-            <br>
-            <br> 
         </section>
         <section id="care">
                 <div class="card-box">
@@ -341,19 +343,6 @@
         <footer>
             <p>&copy Jalees Habib, Author, All Rights Reserved.</p> 
         </footer>
-    </body>
-    <script> 
-        const cardBox = document.querySelector(".card-box"); 
-        document.addEventListener("keydown", function(event) { 
-            if ( event.target.tagName === "INPUT" || event.target.tagName === "TEXTAREA" ){
-                return; 
-            }
-            if (event.key === "ArrowRight") {
-                cardBox.scrollBy({ left: 150, behavior: "smooth" }); 
-            } 
-            if (event.key === "ArrowLeft") { 
-                cardBox.scrollBy({ left: -150, behavior: "smooth" }); 
-            } }); 
-    </script>
+    </body> 
 
 </html>
