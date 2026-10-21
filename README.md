@@ -6,19 +6,20 @@
 
 ## 📌 Technical Overview & System Architecture
 
-**My Garden** is a full-stack, enterprise-grade urban botany platform engineered to solve the complex biological maintenance challenges associated with micro-climate gardening and high-density urban balcony ecosystems. By combining real-time environmental telemetry with deterministic botanical algorithms, the engine automates dynamic irrigation scheduling, sunlight exposure tracking, and organic fertilization cycles. Built on **Next.js 15 App Router** leveraging **React Server Components (RSC)**, the architecture achieves zero-bundle-size overhead for static botanical metadata while maintaining rapid interactive state transitions via **GraphQL (Apollo Client)**. Data persistence and state management are orchestrated through **PostgreSQL** driven by **Prisma ORM**, while real-time multi-attribute search across the botanical taxons is offloaded to an **Algolia InstantSearch** index.
+**My Garden** is a lightweight, high-performance urban botany storefront frontend engineered to solve user interface and navigation challenges associated with micro-climate balcony gardening and plant taxon discovery. By combining highly organized modular layouts with a declarative event-driven architecture, the interface facilitates immediate plant categorization filtering, smooth contextual layout animations, and real-time interactive alert modals. Built on standard **Semantic HTML5** leveraging structured component regions, the architecture achieves a zero-server-overhead footprint while maintaining immediate interactive transitions via vanilla **Asynchronous JavaScript (ES6+)**. The presentation layer and layout mechanics are orchestrated through structural **CSS3**, utilizing a high-visibility, dark-mode design matrix running dynamic custom variables, while complex grid elements and reveal micro-interactions are offloaded to the **GSAP (GreenSock Animation Platform)** engine via its **ScrollTrigger** orchestration plugin.
 
 ### 🛠️ Architecture Tech Stack Matrix
 
 | Architecture Layer | Technology Standard | Purpose & Implementation Scope |
 | :--- | :--- | :--- |
-| **Frontend Framework** | **Next.js 15** | App Router, Server Components (RSC), Edge Runtime Route Handlers |
-| **Styling & Design** | **Tailwind CSS v4** | Custom high-performance Design System, JIT Engine, CSS Variables |
-| **Database & ORM** | **PostgreSQL / Prisma ORM** | Relational state management, dynamic schemas, type-safe query generation |
-| **API Architecture** | **GraphQL / Apollo Client** | Declarative botanical data fetching, cached queries, normalized client cache |
-| **Search Engine** | **Algolia InstantSearch** | Sub-millisecond full-text species lookup and faceted taxonomic filtering |
+| **Runtime & Execution** | **Vanilla JavaScript (ES6+)** | Event-driven architecture, DOM manipulation, mobile navigation drawer state, and reactive contact form validation. |
+| **Animation Pipeline** | **GSAP v3 & ScrollTrigger** | High-performance canvas/DOM interpolation orchestrating staggered grid entrance animations, scale transitions, and layout refreshes. |
+| **Styling & Theming** | **CSS3 Custom Properties** | Unified dark-theme design system featuring centralized CSS variables, clamp fluid typography, custom glassmorphism components, and hardware-accelerated transitions. |
+| **Layout Mechanics** | **CSS Grid & Flexbox** | Multi-column, fully fluid structural grids managing responsive reflow conditions down to mobile single-column breakpoints. |
+| **Data Structure Layer** | **HTML5 Data Attributes** | Deterministic data tagging (`data-category`, `data-filter`) allowing sub-millisecond client-side taxonomic filtering and layout calculation. |
 
 ---
+
 
 ## 📸 System Showcase & Visual Layouts
 
